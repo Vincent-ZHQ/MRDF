@@ -13,7 +13,6 @@ from torch.nn import functional as F
 from torch.utils.data import DataLoader, RandomSampler
 from torch.utils.data import Dataset
 
-# from fairseq.data import data_utils
 from python_speech_features import logfbank
 from scipy.io import wavfile
 import model.avhubert.utils as custom_utils
@@ -169,7 +168,6 @@ class FakeavcelebDataModule(LightningDataModule):
     metadata: List[Metadata]
 
     def __init__(self, root: str = "data",
-                 feature_types: Tuple[Optional[str], Optional[str]] = (None, None),
                  train_fold: str = None, batch_size: int = 1, num_workers: int = 0,
                  take_train: int = None, take_dev: int = None, take_test: int = None):
         print("batch_size", batch_size)
@@ -181,7 +179,7 @@ class FakeavcelebDataModule(LightningDataModule):
         self.take_train = take_train
         self.take_dev = take_dev
         self.take_test = take_test
-        self.Dataset = feature_type_to_dataset_type[feature_types]
+        self.Dataset = Fakeavceleb
         self.pad_audio = False
         self.random_crop = False
         self.max_sample_size = 500
@@ -325,10 +323,3 @@ class FakeavcelebDataModule(LightningDataModule):
     def test_dataloader(self) -> EVAL_DATALOADERS:
         return DataLoader(self.test_dataset, batch_size=self.batch_size, shuffle=False, num_workers=self.num_workers,
                           collate_fn=self.collater, worker_init_fn=seed_worker, generator=g)
-
-
-# The dictionary is used to map the feature type to the dataset type
-# The key is a tuple of (visual_feature_type, audio_feature_type), ``None`` means using end-to-end encoder.
-feature_type_to_dataset_type = {
-    (None, None): Fakeavceleb
-}
