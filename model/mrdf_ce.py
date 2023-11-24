@@ -124,8 +124,8 @@ class MRDF_CE(LightningModule):
     def loss_fn(self, m_logits, v_feats, a_feats, v_logits, a_logits, v_label, a_label, c_label, m_label) -> Dict[str, Tensor]:
 
         contrast_loss = self.contrast_loss(v_feats, a_feats, c_label)
-        a_loss = self.a_cls(v_logits, a_label)
-        v_loss = self.v_cls(a_logits, v_label)
+        a_loss = self.a_cls(a_logits, a_label)
+        v_loss = self.v_cls(v_logits, v_label)
 
         mm_loss = self.mm_cls(m_logits, m_label)
         loss = mm_loss + a_loss + v_loss + contrast_loss
