@@ -1,4 +1,4 @@
-Code for Cross-Modality and Within-Modality Regularization for Audio-Visual DeepFake Detection
+Code for Cross-Modality and Within-Modality Regularization for Audio-Visual DeepFake Detection. (ICASSP 2024)
 
 ## Environemt
 Python=3.8, Pytorch=1.13, pytorch_lightning==1.7.7, CUDA=11.6
