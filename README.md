@@ -65,6 +65,6 @@ If you use this code as part of any published research, we'd really appreciate i
 
 ## Acknowledgements
 
-Some code related to boundary matching mechanism is borrowed from 
+Some code is borrowed from 
 [ControlNet/LAV-DF](https://github.com/ControlNet/LAV-DF) and 
 [facebookresearch/av_hubert](https://github.com/facebookresearch/av_hubert).
