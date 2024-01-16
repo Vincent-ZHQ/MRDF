@@ -1,4 +1,4 @@
-Code for Cross-Modality and Within-Modality Regularization for Audio-Visual DeepFake Detection. (ICASSP 2024)
+Code for Cross-Modality and Within-Modality Regularization for Audio-Visual DeepFake Detection. ([ICASSP 2024](https://arxiv.org/pdf/2401.05746.pdf))
 
 ## Environemt
 Python=3.8, Pytorch=1.13, pytorch_lightning==1.7.7, CUDA=11.6
@@ -60,7 +60,12 @@ More examples could be seen in sript/train.sh and sript/test.sh. Due to the envi
 ## Citations
 If you use this code as part of any published research, we'd really appreciate it if you could cite the following paper:
 ```text
-
+@article{zou2024cross,
+  title={Cross-Modality and Within-Modality Regularization for Audio-Visual DeepFake Detection},
+  author={Zou, Heqing and Shen, Meng and Hu, Yuchen and Chen, Chen and Chng, Eng Siong and Rajan, Deepu},
+  journal={arXiv preprint arXiv:2401.05746},
+  year={2024}
+}
 ```
 
 ## Acknowledgements
