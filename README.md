@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ## Train and Test
 
- For direct inference on Food101, we provide the pretrained checkpoint example [here](https://drive.google.com/drive/folders/1WdfkPRlzX-3Y4xSSS7F9WrR_Hdqpdudw?usp=sharing). The related dataset [splits](https://drive.google.com/drive/folders/1JOo_uA0vmHZaKj3LB6QG55THXkYRClhG?usp=drive_link) are also available
+ For direct inference on FakeAVCeleb, we provide the pretrained checkpoint example [here](https://drive.google.com/drive/folders/1WdfkPRlzX-3Y4xSSS7F9WrR_Hdqpdudw?usp=sharing). The related dataset [splits](https://drive.google.com/drive/folders/1JOo_uA0vmHZaKj3LB6QG55THXkYRClhG?usp=drive_link) are also available
 
 ```
 ## train example
